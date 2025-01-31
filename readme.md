@@ -13,7 +13,7 @@ CREATE TABLE EmpresasFCT (
 
 Apartado 2
 ```sql
-INSERT INTO public."EmpresasFCT" (nombre, quiereAlumnos, numAlumnos, fechaContacto)
+INSERT INTO EmpresasFCT (nombre, quiereAlumnos, numAlumnos, fechaContacto)
 VALUES
     ('Empresa1', TRUE, 5, '2025-01-25'),
     ('Empresa2', FALSE, 0, '2025-01-12'),
@@ -21,12 +21,14 @@ VALUES
     ('Empresa4', TRUE, 10, '2025-01-14'),
     ('Empresa5', TRUE, 7, '2025-01-20');
 ```
-![imagen](https://github.com/user-attachments/assets/46858b15-9cb0-47fe-8fea-02926fabc0b9)
+![imagen](https://github.com/user-attachments/assets/65753f8e-9eac-4b28-91df-c8bd106934f2)
+
 
 Apartado 3
 ```sql
 SELECT *
-FROM public."EmpresasFCT"
+FROM EmpresasFCT
 ORDER BY fechaContacto DESC;
 ```
-![imagen](https://github.com/user-attachments/assets/839e3c31-ed6a-405d-9fc4-1f1e9eb2522d)
+![imagen](https://github.com/user-attachments/assets/97b72071-e4c8-4e2e-8bbf-233c24217dda)
+
