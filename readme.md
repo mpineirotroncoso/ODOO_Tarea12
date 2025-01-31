@@ -94,3 +94,15 @@ SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.bizkaia.neus')
 WHERE email LIKE '%@bilbao.example.com';
 ```
 ![imagen](https://github.com/user-attachments/assets/cde37972-16b3-41e0-a086-63055ba68c84)
+
+Apartado 8
+```sql
+DELETE FROM res_partner 
+WHERE parent_id = (SELECT id FROM res_partner WHERE name = 'Ready Mat');
+```
+![imagen](https://github.com/user-attachments/assets/dbf03f2a-3953-4e07-ae17-1238950ff641)
+
+![imagen](https://github.com/user-attachments/assets/5c029d12-d7de-4c22-9df2-fd3a84cfeb51)
+
+![imagen](https://github.com/user-attachments/assets/a0543d9b-863b-4914-846c-3c4a21dd1e0e)
+
