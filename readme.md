@@ -32,3 +32,19 @@ ORDER BY fechaContacto DESC;
 ```
 ![imagen](https://github.com/user-attachments/assets/97b72071-e4c8-4e2e-8bbf-233c24217dda)
 
+Apartado 4
+```sql
+SELECT 
+    contacto.name, 
+    empresa.name
+FROM 
+    res_partner contacto
+LEFT JOIN 
+    res_partner empresa ON contacto.parent_id = empresa.id
+WHERE 
+    contacto.is_company = FALSE
+    AND contacto.city = 'Tracy'
+ORDER BY 
+    empresa.name ASC;
+```
+![imagen](https://github.com/user-attachments/assets/9c168d5d-1231-4f2f-92fd-3fae18ae1dce)
