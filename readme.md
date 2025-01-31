@@ -67,6 +67,7 @@ ORDER BY
 ```
 ![imagen](https://github.com/user-attachments/assets/f8d8e470-7be1-41e5-b3d5-0ce397275f97)
 
+Apartado 6
 ```sql
 SELECT 
     partner.name, 
@@ -86,3 +87,10 @@ HAVING
 ```
 ![imagen](https://github.com/user-attachments/assets/89b48b18-4dae-4bf5-999d-0eebc9d351b3)
 
+Apartado 7
+```sql
+UPDATE res_partner
+SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.bizkaia.neus')
+WHERE email LIKE '%@bilbao.example.com';
+```
+![imagen](https://github.com/user-attachments/assets/cde37972-16b3-41e0-a086-63055ba68c84)
