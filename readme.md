@@ -48,3 +48,21 @@ ORDER BY
     empresa.name ASC;
 ```
 ![imagen](https://github.com/user-attachments/assets/9c168d5d-1231-4f2f-92fd-3fae18ae1dce)
+
+Apartado 5
+```sql
+SELECT 
+    partner.name, 
+    move.name, 
+    move.invoice_date, 
+    move.amount_untaxed
+FROM 
+    account_move move
+JOIN 
+    res_partner partner ON move.partner_id = partner.id
+WHERE 
+    move.move_type = 'in_refund'
+ORDER BY 
+    move.invoice_date DESC;
+```
+![imagen](https://github.com/user-attachments/assets/f8d8e470-7be1-41e5-b3d5-0ce397275f97)
