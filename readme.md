@@ -66,3 +66,23 @@ ORDER BY
     move.invoice_date DESC;
 ```
 ![imagen](https://github.com/user-attachments/assets/f8d8e470-7be1-41e5-b3d5-0ce397275f97)
+
+```sql
+SELECT 
+    partner.name, 
+    COUNT(move.id), 
+    SUM(move.amount_untaxed)
+FROM 
+    account_move move
+JOIN 
+    res_partner partner ON move.partner_id = partner.id
+WHERE 
+    move.move_type = 'out_invoice'
+    AND move.state = 'posted'
+GROUP BY 
+    partner.name
+HAVING 
+    COUNT(move.id) > 2;
+```
+![imagen](https://github.com/user-attachments/assets/89b48b18-4dae-4bf5-999d-0eebc9d351b3)
+
